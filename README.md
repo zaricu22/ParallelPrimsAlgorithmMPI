@@ -4,7 +4,7 @@ Aplikacija predstavlja pralelizaciju sekvencijalnog Primovog algoritma
 za pronalaženje minimalnog stabla unutar povezanog neusmerenog grafa.
 Korišćena je MPI tehnologija u programskom jeziku C.
 
-###### OPIS ALGORITMA
+#### OPIS ALGORITMA
  
 SEKVENCIJALNO(SALG.c):
 
@@ -35,7 +35,8 @@ PARALELIZACIJA(MINSTABLO.c):
    pronalazi minimum u stablu koji prosleđuje svim ostalim procesima 
 - Postupak se ponavlja
 
-###### REZULTATI
+#### REZULTATI
+[Pogledati ovde](https://github.com/zaricu22/ParallelPrimsAlgorithmMPI/blob/master/Vreme%20izvrs%20na%20klasteru.pdf)
 
 VREME IZVRŠAVANJA NA KLASTERU:
 
@@ -55,4 +56,4 @@ jer svaka naredna iteracija zavisi od novoizabranog minimalnog čvora iz prethod
 - Mogu se paralelizovati koraci unutar FOR petlje i to ažuriranje minimalnog stabla(niz) za novoizabrani minimalni cvor
 (zbog komunikacije brze jedan proces)
 
-[Vreme izvrs na klasteru](https://github.com/zaricu22/ParallelPrimsAlgorithmMPI/blob/master/Vreme%20izvrs%20na%20klasteru.pdf)
+
