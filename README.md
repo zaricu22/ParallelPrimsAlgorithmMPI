@@ -1,23 +1,26 @@
 # ParallelPrimsAlgorithmMPI
  
-SEKVENCIJALNO RUCNO:
+SEKVENCIJALNO RUČNO(SALG.c):
 
-Ne mozemo samo jednostavno izabrati najmanje grane u grafu 
-jer tako ne znaci da cemo dobiti povezano stablo
+Ne mogu se samo jednostavno izabrati najmanje grane u grafu 
+jer tako ne znači da se dobija povezano stablo.
 
-- U minimalnom stablu(niz gde za svaki cvor pamtimo vrednost njegove najmanje grane) 
-na pocetku vred za svaki cvor stavimo beskonacno(nema granu/prazno stablo)
-- Pocetni cvor(bilo koji) proglasimo novim minimalnim damo vrednost 0 i oznacimo kao predjeni
-- Azuriramo vrednosti minimalnog stabla tako sto posmatramo nepredjene cvorove minimalnog stabla
-i ako je vrednost izmedju tog nepredjenog cvora i novoizabranog minimalnog manja 
-od trenutne vrednosti za taj nepredjeni cvor u minimalnom stablu promenimo je
-- Medju nepredjenim cvorovima u minimalnom stablu pronadjemo onaj sa najmanjom vrednoscu(granom)
-i proglasimo ga za novi minimalni i predjeni i ponovo azuriramo minimalno stablo
+- U minimalnom stablu(niz koji za svaki čvor stabla pamti vrednost njegove najmanje grane) 
+na početku svakom čvora stabla dodeli se vrednost beskonačno(nema granu/prazno stablo)
+- Početni čvor(bilo koji) se proglasi za novim minimalnim, dodelimu se vrednost 0 i označi se kao pređeni
+- Ažuriraju se vrednosti minimalnog stabla tako što se posmatraju samo nepređeni čvorovi stabla:
+   ako je vrednost(grana u grafu) između nepređenog čvora i novoizabranog minimalnog čvora
+   manja od trenutne vrednosti(grana u stablu) za nepređeni čvor
+   postavi se prva vrednost(grana u grafu) kao nova vrednost za nepređeni čvor u minimalnom stablu
+- Među nepređenim čvorovima u minimalnom stablu pronađe se onaj sa najmanjom vrednošću(granom)
+proglasi se za novi minimalni, označi se kao pređeni i ponovi se ažuriranje stabla za novi minimalni čvor
+- Koraci pronalaženja minimalnog nepređenog čvora stabla i ažuriranja stabla za isti, 
+ponavlja se dok ima nepređenih čvorova u stablu
 
-Algoritam ima tacno (br cvorova - 1) koraka
+Algoritam ima tačno (broj čvorova grafa - 1) koraka
 
 
-PARALELIZACIJA:
+PARALELIZACIJA(MINSTABLO.c):
 
 - Podelimo graf(matrica) i minimalno stablo(niz) na procese
 - Paralelizujemo samo azuriranje minimalnog stabla za novoizabrani minimalni cvor
