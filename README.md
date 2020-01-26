@@ -49,7 +49,7 @@ tako da sa povećanjem broja procesa povećava se komunikacija
 Brže jedan proces prolazi kroz ceo niz i upoređuje nego da 
 svaki proces to uradi za svoj deo niza i pošalje glavnom procesu.
 
-MALO TOGA SE MOZE PARALELIZOVATI
+MALO TOGA SE MOŽE PARALELIZOVATI
 - Ne može se paralelizovati FOR petlja 
 jer svaka naredna iteracija zavisi od novoizabranog minimalnog čvora iz prethodne
 - Ne može se paralelizovati pronalaženje minimalnog čvora(zahteva nepotrebnu dodatnu komunukaciju)
