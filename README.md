@@ -1,6 +1,12 @@
 # ParallelPrimsAlgorithmMPI
+
+Aplikacija predstavlja pralelizaciju sekvencijalnog Primovog algoritma 
+za pronalaženje minimalnog stabla unutar povezanog neusmerenog grafa.
+Korišćena je MPI tehnologija u programskom jeziku C.
+
+###### OPIS ALGORITMA
  
-SEKVENCIJALNO RUČNO(SALG.c):
+SEKVENCIJALNO(SALG.c):
 
 Ne mogu se samo jednostavno izabrati najmanje grane u grafu 
 jer tako ne znači da se dobija povezano stablo.
@@ -22,27 +28,31 @@ Algoritam ima tačno (broj čvorova grafa - 1) koraka
 
 PARALELIZACIJA(MINSTABLO.c):
 
-- Podelimo graf(matrica) i minimalno stablo(niz) na procese
-- Paralelizujemo samo azuriranje minimalnog stabla za novoizabrani minimalni cvor
-root primi delove i nadje minimum koji prosledji svima ostalima i ponovo azuriranje
+- Podeli se graf(matrica) i minimalno stablo(niz) na procese
+- Paralelizuje se samo ažuriranje minimalnog stabla za novi minimalni čvor stabla:
+   svaki proces računa svoj deo stabla na osnovu grafa za prosleđeni minimalan čvor
+   root proces prima obrađene delove ostalih procesa u celo stablo
+   pronalazi minimum u stablu koji prosleđuje svim ostalim procesima 
+- Postupak se ponavlja
 
+###### REZULTATI
 
-VREME IZVRSAVANJA NA KLASTERU:
+VREME IZVRŠAVANJA NA KLASTERU:
 
-Od samog pocetka razmatranja paralelizacije koraka Primovog algoritma
-uocavaju se problemi sa prekomernom komunikacijom i razmenom podataka.
+Od samog početka razmatranja paralelizacije koraka Primovog algoritma
+uočavaju se problemi sa prekomernom komunikacijom i razmenom podataka.
 
-Sekvancijalan algoritam je vec izuzetno optimizovan,
-tako da sa povecanjem broja procesa povecava se komunikacija
-sto samo dovodi do veceg vremena izvrsavanja
-Pre ce jedan proces da prodje kroz ceo niz i uporedi,
-nego da svaki proces to uradi za svoj deo niza pa posalje glavnom procesu
+Sekvancijalan algoritam je već izuzetno optimizovan,
+tako da sa povećanjem broja procesa povećava se komunikacija
+što samo dovodi do većeg vremena izvršavanja.
+Brže jedan proces prolazi kroz ceo niz i upoređuje nego da 
+svaki proces to uradi za svoj deo niza i pošalje glavnom procesu.
 
 MALO TOGA SE MOZE PARALELIZOVATI
-- Ne moze se paralelizovati FOR petlja 
-jer svaka naredna iteracija zavisi od novoizabranog minimalnog cvora iz prethodne,
-- Ne moze se paralelizovati pronalazenje minimalnog cvora(zahteva nepotrebnu dodatnu komunukaciju)
-- Mogu se paralelizovati koraci unutar FOR petlje i to azuriranje minimalnog stabla(niz) za novoizabrani minimalni cvor
+- Ne može se paralelizovati FOR petlja 
+jer svaka naredna iteracija zavisi od novoizabranog minimalnog čvora iz prethodne
+- Ne može se paralelizovati pronalaženje minimalnog čvora(zahteva nepotrebnu dodatnu komunukaciju)
+- Mogu se paralelizovati koraci unutar FOR petlje i to ažuriranje minimalnog stabla(niz) za novoizabrani minimalni cvor
 (zbog komunikacije brze jedan proces)
 
 [Vreme izvrs na klasteru](https://github.com/zaricu22/ParallelPrimsAlgorithmMPI/blob/master/Vreme%20izvrs%20na%20klasteru.pdf)
