@@ -30,9 +30,9 @@ PARALELIZACIJA(MINSTABLO.c):
 
 - Podeli se graf(matrica) i minimalno stablo(niz) na procese
 - Paralelizuje se samo ažuriranje minimalnog stabla za novi minimalni čvor stabla:<br/>
-   svaki proces računa svoj deo stabla na osnovu grafa za prosleđeni minimalan čvor<br/>
-   root proces prima obrađene delove ostalih procesa u celo stablo<br/>
-   pronalazi minimum u stablu koji prosleđuje svim ostalim procesima 
+&nbsp;svaki proces računa svoj deo stabla na osnovu grafa za prosleđeni minimalan čvor<br/>
+&nbsp;root proces prima obrađene delove ostalih procesa u celo stablo<br/>
+&nbsp;pronalazi minimum u stablu koji prosleđuje svim ostalim procesima 
 - Postupak se ponavlja
 
 #### REZULTATI
