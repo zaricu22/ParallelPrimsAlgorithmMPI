@@ -42,4 +42,4 @@ jer svaka naredna iteracija zavisi od novoizabranog minimalnog cvora iz prethodn
 - Mogu se paralelizovati koraci unutar FOR petlje i to azuriranje minimalnog stabla(niz) za novoizabrani minimalni cvor
 (zbog komunikacije brze jedan proces)
 
-![Vreme izvrs na klasteru](Vreme izvrs na klasteru.pdf)
+[Vreme izvrs na klasteru](Vreme izvrs na klasteru.pdf)
