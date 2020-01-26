@@ -35,7 +35,7 @@ PARALELIZACIJA(MINSTABLO.c):
 &nbsp;pronalazi minimum u stablu koji prosleđuje svim ostalim procesima 
 - Postupak se ponavlja
 
-#### REZULTATI
+#### REZULTATI IZVRŠAVANJA
 [Pogledati ovde](https://github.com/zaricu22/ParallelPrimsAlgorithmMPI/blob/master/Vreme%20izvrs%20na%20klasteru.pdf)
 
 VREME IZVRŠAVANJA NA KLASTERU:
