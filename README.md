@@ -1,7 +1,7 @@
 # ParallelPrimsAlgorithmMPI
 
 Aplikacija predstavlja pralelizaciju sekvencijalnog Primovog algoritma<br/> 
-za pronalaženje minimalnog stabla unutar povezanog neusmerenog grafa.
+za pronalaženje minimalnog stabla unutar povezanog neusmerenog grafa.<br/> 
 Korišćena je MPI tehnologija u programskom jeziku C.
 
 #### OPIS ALGORITMA
