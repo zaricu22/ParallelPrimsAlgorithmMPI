@@ -14,7 +14,7 @@ jer tako ne znači da se dobija povezano stablo.
 - U minimalnom stablu(niz koji za svaki čvor stabla pamti vrednost njegove najmanje grane) 
 na početku svakom čvora stabla dodeli se vrednost beskonačno(nema granu/prazno stablo)
 - Početni čvor(bilo koji) se proglasi za novim minimalnim, dodelimu se vrednost 0 i označi se kao pređeni
-- Ažuriraju se vrednosti minimalnog stabla tako što se posmatraju samo nepređeni čvorovi stabla:
+- Ažuriraju se vrednosti minimalnog stabla tako što se posmatraju samo nepređeni čvorovi stabla:<br/>
    ako je vrednost(grana u grafu) između nepređenog čvora i novoizabranog minimalnog čvora
    manja od trenutne vrednosti(grana u stablu) za nepređeni čvor
    postavi se prva vrednost(grana u grafu) kao nova vrednost za nepređeni čvor u minimalnom stablu
@@ -29,7 +29,7 @@ Algoritam ima tačno (broj čvorova grafa - 1) koraka
 PARALELIZACIJA(MINSTABLO.c):
 
 - Podeli se graf(matrica) i minimalno stablo(niz) na procese
-- Paralelizuje se samo ažuriranje minimalnog stabla za novi minimalni čvor stabla:
+- Paralelizuje se samo ažuriranje minimalnog stabla za novi minimalni čvor stabla:<br/>
    svaki proces računa svoj deo stabla na osnovu grafa za prosleđeni minimalan čvor
    root proces prima obrađene delove ostalih procesa u celo stablo
    pronalazi minimum u stablu koji prosleđuje svim ostalim procesima 
