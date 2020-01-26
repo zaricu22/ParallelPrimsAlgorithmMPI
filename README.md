@@ -15,9 +15,9 @@ jer tako ne znači da se dobija povezano stablo.
 na početku svakom čvora stabla dodeli se vrednost beskonačno(nema granu/prazno stablo)
 - Početni čvor(bilo koji) se proglasi za novim minimalnim, dodelimu se vrednost 0 i označi se kao pređeni
 - Ažuriraju se vrednosti minimalnog stabla tako što se posmatraju samo nepređeni čvorovi stabla:<br/>
-   ako je vrednost(grana u grafu) između nepređenog čvora i novoizabranog minimalnog čvora<br/>
-   manja od trenutne vrednosti(grana u stablu) za nepređeni čvor<br/>
-   postavi se prva vrednost(grana u grafu) kao nova vrednost za nepređeni čvor u minimalnom stablu
+   &nbsp;ako je vrednost(grana u grafu) između nepređenog čvora i novoizabranog minimalnog čvora<br/>
+   &nbsp;manja od trenutne vrednosti(grana u stablu) za nepređeni čvor<br/>
+   &nbsp;postavi se prva vrednost(grana u grafu) kao nova vrednost za nepređeni čvor u minimalnom stablu
 - Među nepređenim čvorovima u minimalnom stablu pronađe se onaj sa najmanjom vrednošću(granom)
 proglasi se za novi minimalni, označi se kao pređeni i ponovi se ažuriranje stabla za novi minimalni čvor
 - Koraci pronalaženja minimalnog nepređenog čvora stabla i ažuriranja stabla za isti, 
